@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python3 --version'
-                sh 'python3 -m pip install requests'
+                sh 'python3 -m pip install requests --user'
                 sh 'python3 script.py'
             }
         }
