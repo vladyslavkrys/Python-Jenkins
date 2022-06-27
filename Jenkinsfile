@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'sudo -H pip install requests'
+                sh 'sudo pip install requests'
                 sh 'python script.py'
             }
         }
