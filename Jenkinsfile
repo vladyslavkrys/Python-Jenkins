@@ -1,11 +1,11 @@
 pipeline {
-    agent { docker { image 'python:3.10.1-alpine' } }
+    agent { docker { image 'python:3.10.5-alpine' } }
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
-                sh 'pip install requests'
-                sh 'python script.py'
+                sh 'python3 --version'
+                sh 'python3 -m pip install requests'
+                sh 'python3 script.py'
             }
         }
     }
